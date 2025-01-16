@@ -1,46 +1,42 @@
 # BookStore API Test Automation
 
-This repository contains test automation scripts for the **BookStore API**, developed as part of the Back-End Test Automation module. The BookStore API manages book-related data such as books and categories.
+This folder contains automated tests for the **BookStore API**, showcasing skills in back-end test automation. The API provides functionality for managing books and categories, and this project demonstrates comprehensive testing of its features.
 
-## Features
+## Project Highlights
 
-- Comprehensive **CRUD testing** for Books:
+### 1. Features Tested
+- **Books**:
   - Retrieve all books and validate their structure and content.
-  - Fetch a book by its title and verify details.
-  - Add, update, and delete books with assertions on the API responses.
+  - Fetch books by title and assert detailed content validation.
+  - Add, update, and delete books while verifying API responses and data consistency.
 
-- **Category Management Tests**:
-  - Test the entire lifecycle of a category:
-    - Create, retrieve, update, and delete categories.
-    - Validate response codes, data integrity, and category details.
+- **Categories**:
+  - Validate creating, retrieving, updating, and deleting categories.
+  - Ensure data integrity and correct lifecycle management.
 
-## How to Use
+### 2. Tools & Frameworks Used
+- **NUnit**: To structure and execute test cases.
+- **RestSharp**: For interacting with the API and making HTTP requests.
+- **Newtonsoft.Json**: To parse and validate JSON responses.
 
-1. **Prerequisites**:
-   - Install [Node.js](https://nodejs.org/en/download/) for running the API locally.
+### 3. Automated Testing Goals
+- Verify proper functionality of CRUD operations for books and categories.
+- Ensure robust handling of edge cases, including:
+  - Invalid or missing data.
+  - API responses for non-existent resources.
+  - Correct HTTP status codes for all operations.
 
-2. **Setup**:
-   - Download and unzip the `BookStore.zip` file.
-   - Navigate to the unzipped directory and open a terminal.
+### 4. Example Test Scenarios
+- Retrieve all books and validate properties like title, author, and price.
+- Add a new book, retrieve it by ID, and confirm the data matches.
+- Update book details and verify changes through API calls.
+- Delete a book and ensure it is no longer accessible.
+- Create and manage categories, confirming their availability and integrity.
 
-3. **Run the API**:
-   - Install dependencies: `npm install`
-   - Start the API server: `npm run start`
-   - Access the API documentation at: [http://localhost:5000/api-docs](http://localhost:5000/api-docs)
+## Why This Project?
+This project demonstrates expertise in back-end test automation, including:
+- Designing structured test cases for REST APIs.
+- Using modern frameworks for efficient API testing.
+- Applying best practices in error handling, assertions, and response validation.
 
-4. **Test Execution**:
-   - Write test cases inside the provided skeleton (`BookTests.cs` and `CategoryTests.cs`).
-   - Use the initialized RestClient (`client`) and authentication token (`token`) for making API requests.
-   - Run the test cases to validate the API functionality.
-
-## Example Tests
-
-- **Book Tests**:
-  - Verify the API retrieves all books with valid data.
-  - Test adding a new book and validating its details.
-  - Update and delete books, ensuring appropriate API responses.
-
-- **Category Tests**:
-  - Create a category and validate it appears in the list.
-  - Update and delete the category, confirming changes via API calls.
-
+By focusing on real-world scenarios, this project reflects practical, job-ready testing skills for API-driven applications.

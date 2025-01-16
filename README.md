@@ -49,33 +49,38 @@ BookStore is a REST API for managing an online bookstore, including functionalit
 
 **Key Features:**
 - **Book Management:**
-  - Add new books to the store with details like title, author, and price.
+  - Add new books to the store with details like title, author, price, pages, and category.
   - Retrieve books by ID or get a list of all available books.
   - Update existing book details.
-  - Delete books from the store.
+  - Delete books from the store with proper validation.
 
 - **API Endpoints:**
   - `POST /books`: Add a new book.
+  - `GET /books`: Retrieve all books.
   - `GET /books/{id}`: Retrieve a specific book by its ID.
   - `PUT /books/{id}`: Update book details.
   - `DELETE /books/{id}`: Remove a book from the store.
 
 **Automated Testing:**
 - **Tools & Frameworks:**
-  - NUnit for writing unit tests.
+  - NUnit for test execution and assertions.
   - RestSharp for API interaction and HTTP request handling.
+  - Newtonsoft.Json for parsing and validating JSON responses.
 
 - **Test Cases:**
-  - Verify successful book creation and retrieval.
+  - Verify successful book creation, retrieval, and deletion.
   - Validate proper handling of invalid book IDs (e.g., book not found).
-  - Test update and delete operations for existing books.
-  - Assert correct API response codes and messages.
+  - Test update operations for existing books.
+  - Assert correct API response codes, error messages, and JSON structures.
 
 **Example Automation Scenarios:**
-- Add a new book and validate its details.
-- Retrieve a book by ID and ensure data consistency.
-- Update a book's details and verify changes.
-- Delete a book and confirm it is no longer accessible.
+- Add a new book and validate its details with a `GET` request.
+- Retrieve a specific book by its title or ID and ensure data consistency.
+- Update a book's details (e.g., title, author) and validate changes.
+- Delete a book and confirm it is no longer accessible through the API.
+- Handle edge cases like invalid or missing data, ensuring proper error messages.
+
+This solution demonstrates a robust approach to automated back-end testing for a RESTful API, focusing on thorough validations and effective error handling.
 
 ---
 
